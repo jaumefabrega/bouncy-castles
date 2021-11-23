@@ -6,11 +6,14 @@ export default function Rental() {
   return (
     <Layout home>
       <Head>
-        <title>Alquila un castillo hinchable en 2 clicks</title>
+        <title>
+          Alquila un Castillo Hinchable en 2 clicks | Castillos Hinchables
+          Online
+        </title>
       </Head>
       <section>
-        <p>Alquila un castillo hinchable</p>
-        <p>Blah blah blah todos garantía etc</p>
+        <h1>Alquila</h1>
+        <p>Blah blah blah</p>
       </section>
     </Layout>
   );
