@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../src/modules/general/Layout";
+import CastleCard from "../src/components/CastleCard/CastleCard";
 
 export default function Rental() {
   return (
@@ -13,6 +14,7 @@ export default function Rental() {
       </Head>
       <section>
         <h1>Alquila</h1>
+        <CastleCard />
         <p>Blah blah blah</p>
       </section>
     </Layout>
