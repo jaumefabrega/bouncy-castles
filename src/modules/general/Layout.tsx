@@ -24,6 +24,10 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content="Alquila un Castillo Hinchable" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <header className={styles.header}>
         <div>Castillos Hinchables</div>
