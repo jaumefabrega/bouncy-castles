@@ -7,15 +7,9 @@
 }
 
 .filters {
-  max-width: 25%;
+  max-width: 290px;
+  height: fit-content;
   flex-basis: 25%;
-  padding: 0 1.3rem;
-  border-radius: 8px;
-  background-color: $background-light;
-
-  input {
-    display: block;
-  }
 }
 
 .content {

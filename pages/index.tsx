@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../src/modules/general/Layout";
 import CastleCard from "../src/components/CastleCard/CastleCard";
+import SearchFilters from "../src/components/SearchFilters/SearchFilters";
 import styles from "../styles/rental.module.scss";
 
 export default function Rental() {
@@ -15,11 +16,7 @@ export default function Rental() {
       </Head>
       <section className={styles.section}>
         <div className={styles.filters}>
-          <h3>FILTROS</h3>
-          <input></input>
-          <input></input>
-          <input></input>
-          <input></input>
+          <SearchFilters />
         </div>
         <div className={styles.content}>
           <div>

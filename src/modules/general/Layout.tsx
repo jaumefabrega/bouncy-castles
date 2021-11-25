@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import cn from "classnames";
 import { urls } from "../../constants";
 import styles from "./layout.module.scss";
 
@@ -30,24 +31,28 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <header className={styles.header}>
-        <div>Castillos Hinchables</div>
-        <nav className={styles.nav}>
-          <Link href={urls.ALQUILER}>
-            <a>Alquiler</a>
-          </Link>
-          <Link href={urls.COMPRA}>
-            <a>Compra</a>
-          </Link>
-          <Link href={urls.BLOG}>
-            <a>Blog</a>
-          </Link>
-          <Link href={urls.CONTACTO}>
-            <a>Contacto</a>
-          </Link>
-        </nav>
+        <div className={styles.content}>
+          <div>Castillos Hinchables</div>
+          <nav className={styles.nav}>
+            <Link href={urls.ALQUILER}>
+              <a>Alquiler</a>
+            </Link>
+            <Link href={urls.COMPRA}>
+              <a>Compra</a>
+            </Link>
+            <Link href={urls.BLOG}>
+              <a>Blog</a>
+            </Link>
+            <Link href={urls.CONTACTO}>
+              <a>Contacto</a>
+            </Link>
+          </nav>
+        </div>
       </header>
-      <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>Footer</footer>
+      <main className={cn(styles.main, styles.content)}>{children}</main>
+      <footer className={styles.footer}>
+        <div className={styles.content}>Footer</div>
+      </footer>
     </div>
   );
 }

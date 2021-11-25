@@ -1,0 +1,47 @@
+@import "./colors";
+
+.container {
+  padding: 1.1rem 1.3rem;
+  border-radius: 8px;
+  background-color: $background-light;
+
+  h3 {
+    margin: 0.5rem 0;
+  }
+
+  .inputsSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    padding: 0.5rem 0;
+  }
+
+  input:not([type="checkbox"]) {
+    display: block;
+  }
+
+  .priceWrapper {
+    display: flex;
+    column-gap: 1rem;
+
+    input {
+      width: 6rem;
+      text-align: center;
+    }
+  }
+
+  .field {
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td {
+      padding: 0;
+
+      span {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
