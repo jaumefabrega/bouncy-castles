@@ -102,6 +102,29 @@ function getCastles(latitude, longitude) {
   return parseCastlesFromHttp(MOCK_CASTLES);
 }
 
+function getGeocode(address) {
+  const geocodingApiKey =
+    process.env.NEXT_PUBLIC_GEOCODING_API_KEY || "dumbKey";
+
+  return fetch(
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+      address
+    )}&key=${geocodingApiKey}`
+  )
+    .then((res) => res.json())
+    .then((res) => {
+      const bestMatch = res.results[0];
+      return {
+        formattedAddress: bestMatch.formatted_address,
+        location: bestMatch.geometry.location,
+      };
+    })
+    .catch((err) => {
+      console.error(err);
+      throw new Error("apiClient error when fetching bouncy castles data");
+    });
+}
+
 // // Helper function for testing (loading icons, etc)
 // function sleeper(ms) {
 //   return function (x) {
@@ -111,6 +134,7 @@ function getCastles(latitude, longitude) {
 
 const api = {
   getCastles,
+  getGeocode,
 };
 
 export default api;
