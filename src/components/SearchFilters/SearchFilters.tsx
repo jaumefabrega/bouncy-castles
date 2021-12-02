@@ -69,10 +69,6 @@ export default function SearchFilters() {
           <input type="checkbox" id="include_vat" />
           <label htmlFor="include_vat">Incluir IVA</label>
         </div>
-        <div className={styles.field}>
-          <label htmlFor="query">Buscar por palabras</label>
-          <input type="text" id="query" />
-        </div>
       </div>
     </div>
   );
