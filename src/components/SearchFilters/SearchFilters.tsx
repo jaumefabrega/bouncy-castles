@@ -35,30 +35,32 @@ export default function SearchFilters() {
         <div className={styles.field}>
           <label htmlFor="time_from">Hora</label>
           <table>
-            <tr>
-              <td>
-                <label htmlFor="time_from">desde</label>
-              </td>
-              <td></td>
-              <td>
-                <label htmlFor="time_from">hasta</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="time" id="time_from" />
-              </td>
-              <td>
-                <span>&#8212;</span>
-              </td>
-              <td>
-                <input type="time" id="time_to" />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <label htmlFor="time_from">desde</label>
+                </td>
+                <td></td>
+                <td>
+                  <label htmlFor="time_from">hasta</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="time" id="time_from" />
+                </td>
+                <td>
+                  <span>&#8212;</span>
+                </td>
+                <td>
+                  <input type="time" id="time_to" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div className={styles.field}>
-          <input type="checkbox" id="include_instructor" checked />
+          <input type="checkbox" id="include_instructor" />
           <label htmlFor="include_instructor">Incluir monitor</label>
         </div>
         <div className={styles.field}>

@@ -2,6 +2,7 @@ const BASE_URL = "http://localhost:3001";
 
 const MOCK_CASTLES = [
   {
+    id: 1,
     name: "Patrulla Canina",
     description: "Precioso Castillo con tobogán y muñecos",
     dimensions_width: 4,
@@ -26,6 +27,7 @@ const MOCK_CASTLES = [
     ],
   },
   {
+    id: 2,
     name: "Frozen",
     description: "La película más exitosa de Disney",
     dimensions_width: 3,
@@ -53,6 +55,7 @@ const MOCK_CASTLES = [
 
 function parseCastlesFromHttp(castles) {
   return castles.map((castle) => ({
+    id: castle.id,
     name: castle.name,
     description: castle.description,
     keywords: castle.keywords,

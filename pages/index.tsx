@@ -14,7 +14,6 @@ export default function Rental() {
   useEffect(() => {
     const apiCastles = api.getCastles(1, 2);
     setCastles(apiCastles);
-    console.log(apiCastles);
   }, []);
 
   return (
@@ -42,6 +41,7 @@ export default function Rental() {
           <div className={styles.resultsGrid}>
             {castles.map((castle) => (
               <CastleCard
+                key={castle.id}
                 name={castle.name}
                 description={castle.description}
                 dimensions={castle.dimensions}
