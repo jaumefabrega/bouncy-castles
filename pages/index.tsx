@@ -16,6 +16,7 @@ export default function Rental() {
     setCastles(apiCastles);
   }, []);
 
+  // Test comment (remove this comment)
   return (
     <Layout home>
       <Head>
